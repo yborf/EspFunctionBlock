@@ -9,15 +9,20 @@ Configuration is privided by json file in the filesytem.
 Example (Digital input on pin 2 connected to a Digita output on pin 0:
 
 {
-  "FB1": {
+  "FB1": 
+  {
     "DigitalInput":"1",
-    "Attributes":{"Pin":2}
+    "Attributes":{"Pin":2, "Period":5000 }
   },
   
-  "FB2": {
+  "FB2": 
+  {
     "DigitalOutput":"1",
     "Attributes":{"Pin":0 },
-    "Inputs":{"I":"FB1"}
+    "Inputs":
+    {"I":
+      {"Q":"FB1"}
+    }
   }
 }
 
